@@ -1,0 +1,75 @@
+.property-card {
+  width: 300px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+  transition: transform 0.3s;
+  margin: 20px;
+}
+
+.property-card:hover {
+  transform: translateY(-6px);
+}
+
+.card-image {
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+}
+
+.card-body {
+  padding: 16px;
+}
+
+.property-title {
+  font-size: 1.2rem;
+  color: #2c3e50;
+  margin-bottom: 8px;
+}
+
+.property-location {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+  margin-bottom: 12px;
+}
+
+.property-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px;
+  font-size: 0.85rem;
+  color: #34495e;
+}
+
+.property-features li {
+  margin-bottom: 4px;
+}
+
+.property-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #27ae60;
+}
+
+.book-btn {
+  padding: 6px 12px;
+  background-color: #2980b9;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.book-btn:hover {
+  background-color: #1c6391;
+}

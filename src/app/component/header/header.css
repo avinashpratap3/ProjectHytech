@@ -1,0 +1,55 @@
+/* Layout Styling */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  background-color: #1f2937; /* dark gray */
+  padding: 1rem 0;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+}
+
+.nav-links a {
+  margin-left: 1.5rem;
+  text-decoration: none;
+  color: #cbd5e1;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: white;
+  border-bottom: 2px solid #38bdf8;
+}
+
+.main-content {
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: auto;
+}
+a img{
+  height: 40px;
+  width: 40px;
+  padding-top: 10px;
+}
+

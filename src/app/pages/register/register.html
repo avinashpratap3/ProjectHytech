@@ -1,0 +1,88 @@
+<form [formGroup]="propertyForm" (ngSubmit)="onsubmit()" class="property-form">
+
+  <h2>Register Your Property</h2>
+
+  <label>Property Name</label>
+  <input type="text" formControlName="propertyName" placeholder="e.g. Grand Palace Hotel" />
+  <div *ngIf="propertyForm.get('propertyName')?.touched && propertyForm.get('propertyName')?.invalid" class="warning">
+    Property Name is required.
+  </div>
+
+  <label>Property Type</label>
+  <select formControlName="propertyType">
+    <option value="">Select Type</option>
+    <option value="Hotel">Hotel</option>
+    <option value="Homestay">Homestay</option>
+    <option value="Guest House">Guest House</option>
+  </select>
+  <div *ngIf="propertyForm.get('propertyType')?.touched && propertyForm.get('propertyType')?.invalid" class="warning">
+    Property Type is required.
+  </div>
+
+  <label>City</label>
+  <input type="text" formControlName="city" placeholder="e.g. Mumbai" />
+  <div *ngIf="propertyForm.get('city')?.touched && propertyForm.get('city')?.invalid" class="warning">
+    City is required.
+  </div>
+
+  <label>Full Address</label>
+  <textarea formControlName="address" rows="2" placeholder="Property address..."></textarea>
+  <div *ngIf="propertyForm.get('address')?.touched && propertyForm.get('address')?.invalid" class="warning">
+    Address is required.
+  </div>
+
+  <label>Owner Name</label>
+  <input type="text" formControlName="ownerName" placeholder="Owner's full name" />
+  <div *ngIf="propertyForm.get('ownerName')?.touched && propertyForm.get('ownerName')?.invalid" class="warning">
+    Owner Name is required.
+  </div>
+
+  <label>Email</label>
+  <input type="email" formControlName="email" placeholder="example@example.com" />
+  <div *ngIf="propertyForm.get('email')?.touched && propertyForm.get('email')?.invalid" class="warning">
+    <div *ngIf="propertyForm.get('email')?.errors?.['required']">Email is required.</div>
+    <div *ngIf="propertyForm.get('email')?.errors?.['email']">Enter a valid email.</div>
+  </div>
+
+  <label>Phone</label>
+  <input type="tel" formControlName="phone" placeholder="10-digit mobile number" />
+  <div *ngIf="propertyForm.get('phone')?.touched && propertyForm.get('phone')?.invalid" class="warning">
+    <div *ngIf="propertyForm.get('phone')?.errors?.['required']">Phone number is required.</div>
+    <div *ngIf="propertyForm.get('phone')?.errors?.['pattern']">Phone number must be 10 digits.</div>
+  </div>
+
+  <label>Price per Night (₹)</label>
+  <input type="number" formControlName="pricePerNight" placeholder="e.g. 1500" />
+  <div *ngIf="propertyForm.get('pricePerNight')?.touched && propertyForm.get('pricePerNight')?.invalid" class="warning">
+    <div *ngIf="propertyForm.get('pricePerNight')?.errors?.['required']">Price is required.</div>
+    <div *ngIf="propertyForm.get('pricePerNight')?.errors?.['min']">Price must be at least ₹100.</div>
+  </div>
+
+  <label>Image URL</label>
+  <input type="text" formControlName="image" placeholder="Paste image URL here (e.g. https://...)" />
+  <div *ngIf="propertyForm.get('image')?.touched && propertyForm.get('image')?.invalid" class="warning">
+    Image URL is required.
+  </div>
+
+  <label>Check-In Time</label>
+  <input type="time" formControlName="checkIn" />
+  <div *ngIf="propertyForm.get('checkIn')?.touched && propertyForm.get('checkIn')?.invalid" class="warning">
+    Check-In Time is required.
+  </div>
+
+  <label>Check-Out Time</label>
+  <input type="time" formControlName="checkOut" />
+  <div *ngIf="propertyForm.get('checkOut')?.touched && propertyForm.get('checkOut')?.invalid" class="warning">
+    Check-Out Time is required.
+  </div>
+
+ <label class="checkbox-label">
+    <input type="checkbox" formControlName="acceptTerms" />
+    I accept the terms and conditions
+  </label>
+  <div *ngIf="propertyForm.get('acceptTerms')?.touched && propertyForm.get('acceptTerms')?.invalid" class="warning">
+    You must accept the terms and conditions.
+  </div>
+
+  <button type="submit">Register Property</button>
+</form>

@@ -1,0 +1,19 @@
+<div class="property-card">
+  <div class="card-image" [ngStyle]="{ 'background-image': 'url(' + property.image + ')' }"></div>
+
+  <div class="card-body">
+    <h3 class="property-title">{{ property.name }}</h3>
+    <p class="property-location">📍 {{ property.city }}, {{ property.country }}</p>
+
+    <ul class="property-features">
+      <li>🛏 {{ property.roomTypes }} Room Types</li>
+      <li *ngIf="property.amenities?.wifi">📶 Free Wi-Fi</li>
+      <li *ngIf="property.amenities?.parking">🚗 Parking</li>
+    </ul>
+
+    <div class="property-footer">
+      <div class="price">₹ {{ property.pricePerNight }}/night</div>
+      <button class="book-btn" [routerLink]="['/hotel', property.id]" >View Details</button>
+    </div>
+  </div>
+</div>

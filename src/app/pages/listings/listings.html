@@ -1,0 +1,16 @@
+<div class="listings-container">
+  <h2 class="page-title">Available Properties</h2>
+<p>Total hotels found: {{ hotelList.length }}</p>
+
+  <div class="card-grid">
+    <app-card
+      *ngFor="let hotel of hotelList"
+      [property]="hotel"
+      >
+    </app-card>
+  </div>
+
+  <div *ngIf="hotelList?.length === 0">
+    No hotels available.
+  </div>
+</div>

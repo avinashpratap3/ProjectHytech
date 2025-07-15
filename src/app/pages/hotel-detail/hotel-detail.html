@@ -1,0 +1,30 @@
+<div class="hotel-detail-container">
+  <div class="hotel-banner" [ngStyle]="{ 'background-image': 'url(' + hotel?.image + ')' }"></div>
+
+  <div class="hotel-content">
+    <h2>{{ hotel?.name }}</h2>
+    <p class="location">📍 {{ hotel?.city }}, {{ hotel?.country }}</p>
+
+    <div class="info-section">
+      <h4>Property Description</h4>
+      <p>{{ hotel?.description || 'No description available.' }}</p>
+    </div>
+
+    <div class="info-section">
+      <h4>Amenities</h4>
+      <ul class="amenities-list">
+        <li *ngIf="hotel?.amenities?.wifi">📶 Free Wi-Fi</li>
+        <li *ngIf="hotel?.amenities?.parking">🚗 Parking</li>
+        <li *ngIf="hotel?.amenities?.pool">🏊 Pool</li>
+        <li *ngIf="hotel?.amenities?.restaurant">🍽️ Restaurant</li>
+        <li *ngIf="hotel?.amenities?.gym">🏋️ Gym</li>
+      </ul>
+    </div>
+
+    <div class="price-section">
+      <span class="price">₹ {{ hotel?.pricePerNight }} / night</span>
+    </div>
+
+    <button class="edit-btn" [routerLink]="['/edit', hotel?.id]">Edit Details</button>
+  </div>
+</div>

@@ -1,0 +1,38 @@
+<form [formGroup]="hotelForm" (ngSubmit)="onSubmit()">
+  <h2>Edit Hotel</h2>
+
+  <label>Hotel Name:
+    <input type="text" formControlName="name" />
+  </label>
+
+  <label>City:
+    <input type="text" formControlName="city" />
+  </label>
+
+  <label>Country:
+    <input type="text" formControlName="country" />
+  </label>
+
+  <label>Price Per Night:
+    <input type="number" formControlName="pricePerNight" />
+  </label>
+
+  <label>Image URL:
+    <input type="text" formControlName="image" />
+  </label>
+
+  <label>Room Types:
+    <input type="number" formControlName="roomTypes" />
+  </label>
+
+  <div formGroupName="amenities">
+    <h4>Amenities:</h4>
+    <label><input type="checkbox" formControlName="wifi" /> WiFi</label>
+    <label><input type="checkbox" formControlName="parking" /> Parking</label>
+    <label><input type="checkbox" formControlName="pool" /> Pool</label>
+    <label><input type="checkbox" formControlName="restaurant" /> Restaurant</label>
+    <label><input type="checkbox" formControlName="gym" /> Gym</label>
+  </div>
+
+  <button type="submit">Update Hotel</button>
+</form>

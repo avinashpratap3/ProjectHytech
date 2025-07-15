@@ -1,0 +1,17 @@
+<header class="header">
+  <div class="container" id="top">
+    <div class="logo">
+      <a routerLink="/">
+        <img src="https://i.pinimg.com/1200x/4d/7a/ec/4d7aecb5e539968fec979b35f5618527.jpg"  alt="Logo">
+    </a>
+</div>
+
+<nav class="nav-links">
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+      <a routerLink="/listings" routerLinkActive="active">Listings</a>
+      <a routerLink="/register" routerLinkActive="active">Register</a>
+    </nav>
+  </div>
+</header>
+
+<router-outlet></router-outlet>

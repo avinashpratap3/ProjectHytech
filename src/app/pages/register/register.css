@@ -1,0 +1,75 @@
+.property-form {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.property-form h2 {
+  margin-bottom: 20px;
+  color: #2c3e50;
+  text-align: center;
+}
+
+.property-form label {
+  display: block;
+  margin-top: 15px;
+  font-weight: 500;
+  color: #34495e;
+}
+
+.property-form input,
+.property-form select,
+.property-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+.property-form input:focus,
+.property-form textarea:focus,
+.property-form select:focus {
+  border-color: #2980b9;
+  outline: none;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.checkbox-label input {
+  width: auto;
+  margin-right: 10px;
+}
+
+.property-form button {
+  margin-top: 25px;
+  width: 100%;
+  padding: 12px;
+  background-color: #2980b9;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.property-form button:hover {
+  background-color: #1c6391;
+}
+.warning {
+  color: orange;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
